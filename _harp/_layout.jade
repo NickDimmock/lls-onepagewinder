@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title One Page Wonder!
+    meta(name="description" content="One Page Wonder")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet" href="main.css")
+    link(rel='icon', type='image/png', href='favicon.png', sizes='32x32')
+
+
+  body
+    h1 One Page Wonder!
+    #nav
+        a(href="" data-id="home").show Home
+        a(href="" data-id="starters").show Story Starters
+        a(href="" data-id="prompts").show Prompts
+    != yield
+    script(
+        src="//code.jquery.com/jquery-3.6.0.slim.min.js" 
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" 
+        crossorigin="anonymous"
+    )
+    script(
+        src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.9.0/lodash.min.js"
+        integrity="sha512-0iCeIPM9ajKhqFvinM6o+J0hi/Slc21bjS9gPghWAn4dHO8kk1aX9n7c6pNdhsURkc0iC/6R58awhL1WU8NKmQ=="
+        crossorigin="anonymous"
+    )
+    script(src="app-data.js")
+    script(src="story-data.js")
+    script(src="plotbuild.js")
+    script(src="app.js")

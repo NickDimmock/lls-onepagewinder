@@ -1,0 +1,136 @@
+@import url('//fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
+@import url('//fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('//fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('//fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+    font-family: "Varela Round", Arial, Helvetica, sans-serif;
+    margin: 2% 20%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: .5rem;
+    font-size: 3rem;
+}
+
+.screen {
+    display: none;
+}
+
+#nav {
+    font-size: 1.25rem;
+}
+#nav a {
+    text-decoration: none;
+    padding: .25rem .5rem;
+    margin: 0 .5rem;
+    background-color: coral;
+    color: white;
+    border-radius: .75rem;
+}
+#nav a:hover {
+    background-color: crimson;
+}
+
+#home {
+    display: block;
+}
+
+div#quotes {
+    font-family: 'Roboto Slab', 'Times New Roman', Times, serif;
+}
+div#quotes figure {
+    padding: 1rem;
+    border: 1px solid #888;
+    background-color: #FFFFE0;
+    margin-inline: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 66%;
+}
+div#quotes blockquote{
+    /*margin-inline-start: 0;*/
+    font-size: 1.5rem;
+    margin: 1rem;
+    text-align: justify;
+}
+div#quotes figcaption {
+    font-size: 1.25rem;
+    color: #555;
+    font-style: italic;
+}
+div#quotes figcaption::before {
+    content: "- ";
+}
+
+#prompt {
+    text-align: center;
+    margin: 1rem;
+    font-family: "Lilita One";
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+.pulser {
+    transform: scale(1);
+	animation: pulse .8s 1;
+}
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+	}
+	30% {
+		transform: scale(1.4);
+    }
+	75% {
+		transform: scale(.95);
+	}
+}
+
+#spin {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+#prompt div {
+    display: inline;
+}
+
+#spin {
+    font-family: "Fredoka One";
+    font-size: 2rem;
+    border-radius: 20px;
+    padding: .3rem;
+    background-color: white;
+    border: 3px solid #8ac926;
+    color: #8ac926;
+    cursor: pointer;
+}
+
+#spin:hover {
+    border: 3px solid #ff4800;
+    color: #ff4800;
+}
+
+#couldyou, #intro {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#spinner {
+    display: none;
+    text-align: center;
+    margin-top: 10rem;
+}
+#spinnerPrompt {
+    font-size: 5rem;
+    /*filter: blur(3px);*/
+}
+#spinnerPrompt div {
+    display: inline;
+    font-family: "Lilita One";
+    text-transform: uppercase;
+}
