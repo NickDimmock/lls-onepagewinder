@@ -71,7 +71,7 @@ newQuestions = function() {
   return $("#couldyou").html(`<p>Could you write a story called <strong>${myTitle}</strong>?</p><p>${myQuestions[0]}</p><p>${myQuestions[1]}</p><p>If you want to try again, press <strong>SPIN!</strong>`);
 };
 
-spin = function() {
+old_spin = function() {
   $("#prompt").removeClass("pulser");
   $("#postPrompt").hide();
   return _.times(10, function(i) {
@@ -85,6 +85,29 @@ spin = function() {
     }, 100 * i);
   });
 };
+
+spin = function() {
+  $("#postPrompt").hide();
+  shrinkText();
+}
+
+function shrinkText() {
+  document.getElementById("prompt").classList.add("shrink");
+  setTimeout(growText, 500);
+}
+
+function growText() {
+  document.getElementById("prompt").classList.remove("shrink");
+  newPrompt();
+  document.getElementById("prompt").classList.add("grow");
+  setTimeout(function(){
+      document.getElementById("prompt").classList.remove("grow");
+      $("#postPrompt").show();
+  },500)
+}
+
+//document.getElementById("go").addEventListener("click", shrinkText);
+
 
 $(function() {
   // Menu page loaders
@@ -101,8 +124,9 @@ $(function() {
   $("#spin").click(function() {
     return spin();
   });
-  $("#newClassics").click(function() {
-    event.preventDefault();
+  document.getElementById("newClassics").addEventListener("click", function(e) {
+  //$("#newClassics").click(function() {
+    e.preventDefault();
     return setClassics();
   });
   $("#newStarter").click(function() {

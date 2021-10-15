@@ -134,3 +134,38 @@ div#quotes figcaption::before {
     font-family: "Lilita One";
     text-transform: uppercase;
 }
+
+#text {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .shrink {
+     animation: shrink forwards;
+    animation-duration: .5s; 
+  }
+  .grow {
+    animation: grow forwards;
+    animation-duration: .5s;
+    color: green;
+  }
+  
+  @keyframes shrink {
+    0% {
+       transform: scale(1);
+       opacity: 1;
+    }
+    100% {
+      transform: scale(0) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes grow {
+    0% {
+      transform: scale(0) rotate(0deg);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1) rotate(360deg);
+    }
+  }
